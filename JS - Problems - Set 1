@@ -31,3 +31,17 @@
       if(((a + b) > c) && ((b + c) > a) &&  ((c + a) > b)) res = true;
       return res;
    }
+   
+4. Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+   /* Program */
+   function createPhoneNumber(numbers){
+      let resultString = "(";
+      let count = 1;
+      for(let n of numbers){
+         resultString = resultString + n;
+         if(count === 3) resultString = resultString + ") ";
+         if(count === 6) resultString = resultString + "-";
+         count++;
+      }
+      return resultString;
+   }
