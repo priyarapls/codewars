@@ -53,4 +53,16 @@
       if(n < 10) return n;
       return digital_root((n - 1) % 9 + 1);
    }
+   
+6. Replace the chars of a given string as mentioned below - [DNA Problems] - A -> T; T->A; G->C, C->G;
+   /* Program */
+   function DNAStrand(dna){
+      let dnaArr = dna.split("");
+      let dnaMap = {"A": "T","T":"A","C":"G","G":"C"};
+      for(let i=0; i<dnaArr.length; i++){
+         dnaArr[i] = dnaMap[dnaArr[i]];
+      }
+      let res = dnaArr.join("");
+      return res;
+    }
 
