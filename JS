@@ -1,5 +1,5 @@
 1. Find Outlier[N] - Odd man Out. 
-  Input - Array of Integers [can be either even no's or odd no's] - If Even nos - Outlier will be Odd else Outlier will be Even.
+   Input - Array of Integers [can be either even no's or odd no's] - If Even nos - Outlier will be Odd else Outlier will be Even.
   /* Program */
   function findOutlier(integers){
     //your code here
@@ -12,3 +12,12 @@
     if(even.length > odd.length) return odd[0];
     else return even[0];
   }
+  
+2. Given a string of space separated numbers, and have to return the highest and lowest number.
+   /* Program */
+   function highAndLow(numbers){
+     let arrOfNos = numbers.split(" ");
+     arrOfNos.sort(function(a, b){return b - a}); /* sort desc */
+     let res = arrOfNos[0] + " " + arrOfNos[arrOfNos.length - 1];
+     return res;
+   }
