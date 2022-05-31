@@ -1,0 +1,14 @@
+1. Find Outlier[N] - Odd man Out. 
+  Input - Array of Integers [can be either even no's or odd no's] - If Even nos - Outlier will be Odd else Outlier will be Even.
+  /* Program */
+  function findOutlier(integers){
+    //your code here
+    let even = []; let odd = [];
+    let intLength = integers.length;
+    for(let num of integers){
+      if(num % 2 === 0) even.push(num);
+      else odd.push(num);
+    }
+    if(even.length > odd.length) return odd[0];
+    else return even[0];
+  }
